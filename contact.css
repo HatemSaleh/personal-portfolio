@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background:linear-gradient(rgb(79, 82, 121),rgb(14, 15, 23),rgb(1, 0, 15));
+    color: whitesmoke;
+    min-height: 100vh;
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.logo{
+    font-size: 50px;
+    margin-left: 200px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family:Poppins;
+    background: linear-gradient(to left, rgb(238, 181, 186), rgb(204, 200, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    animation: slideTop 1s ease forwards ;
+    
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 80vh;
+}
+
+form{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 2vw 4vw;
+    border-radius: 10px;
+}
+
+form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+
+h3{
+    background: linear-gradient(to right, rgb(145, 57, 126), rgb(204, 200, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form button{
+    max-width: 120px;
+    margin-left:100px ;
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 10px;
+    background: linear-gradient(to left, rgb(238, 181, 186), rgb(204, 200, 255));
+    cursor: pointer;
+    color: rgb(71, 3, 100);
+}
+
+@keyframes slideTop{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media  screen and (max-width: 1100px){
+    .home{
+        min-height: 82vh;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center ; 
+        margin-left: 0;
+    }
+
+    .logo{
+        margin-left: 0;                   
+    }
+    
+}

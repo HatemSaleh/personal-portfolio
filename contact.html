@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatem</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Hatem.dev</a>
+        </nav>
+    </header>
+    <div class="home">
+        <div class="form">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h3>MESSAGE ME</h3>
+                <input type="text" placeholder="Name" id="name" autocomplete="off">
+                <input type="email" placeholder="Email" id="email" autocomplete="off">
+                <input type="text" placeholder="Subject" id="subject" autocomplete="off">
+                <textarea id="message" placeholder="Message" cols="30" rows="10"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendEmail()
+        {
+            Email.send({
+                SecureToken : "fb76955e-bdf0-43f1-b336-b68994f574bd",
+                To : 'hatemsaleh355@gmail.com',
+                From : document.getElementById("email").value,
+                Subject :  document.getElementById("subject").value,
+                Body : "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script>
+</body>
+</html>
