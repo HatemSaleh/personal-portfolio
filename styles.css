@@ -139,6 +139,7 @@ nav{
 
 
  .img-circle{
+    /* position: relative; */
     width: 90%;
     max-height: 350px;
     border-radius: 50%;
